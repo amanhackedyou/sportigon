@@ -48,6 +48,8 @@ export function withAuth(handler: (user: IUser, req: Request, params?: any) => P
 
             return await handler(user, req, params)
         } catch (err) {
+            console.log('Error in withAuth:', err);
+
             return NextResponse.json({ status: "error", message: 'Something went wrong, please try again.' }, { status: 500 })
         }
     }

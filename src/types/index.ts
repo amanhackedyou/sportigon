@@ -1,5 +1,5 @@
 export interface IMedia {
-    type: "video" | "image",
+    type: "video" | "image" | "gif",
     url: string,
     thumbnail?: string
 }
