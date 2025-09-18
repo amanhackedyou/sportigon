@@ -1,3 +1,4 @@
+import { userConfig } from "@/config/user.config";
 import mongoose from "mongoose";
 
 
@@ -9,6 +10,7 @@ export interface IUser extends mongoose.Document {
     password: string; // Hashed
     fullName?: string;
     profilePicture?: string;
+    coverPhoto?: string;
     country?: string; // User's selected country
     currency?: string; // Based on country selection
     description?: string; // Short bio or description
@@ -84,6 +86,7 @@ const UserSchema: mongoose.Schema<IUser> = new mongoose.Schema(
         password: { type: String, required: true }, // Hashed
         fullName: { type: String, trim: true, default: "" },
         profilePicture: { type: String, default: "" },
+        coverPhoto: { type: String, default: "" },
         country: { type: String, default: "" }, // User's selected country
         currency: { type: String, default: "USD" }, // Based on country selection
         description: { type: String, default: "", trim: true },
@@ -173,5 +176,13 @@ const UserSchema: mongoose.Schema<IUser> = new mongoose.Schema(
     },
     { timestamps: true }
 );
+
+// UserSchema.post("findOne", function (user: IUser, next) {
+//     if (user.profilePicture?.trim() == "") {
+//         user.profilePicture = userConfig.defaultProfilePicture;
+//     }
+//     next()
+
+// });
 
 export const UserModel = mongoose.models["User"] || mongoose.model("User", UserSchema);

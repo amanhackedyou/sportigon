@@ -82,7 +82,8 @@ export const POST = async (request: NextRequest) => {
     if (!user) {
         return NextResponse.json({
             status: "error",
-            message: `Account doesn't exist with the provided ${body.signupWith == "email" ? "Email" : "Phone"}, please provide valid details.`
+            // message: `Account doesn't exist with the provided ${body.signupWith == "email" ? "Email" : "Phone"}, please provide valid details.`
+            message: `We couldn’t find an account associated with this ${body.signupWith == "email" ? "email" : "phone"}. Please ensure the details are correct and try again.`
         });
     }
 
@@ -91,7 +92,7 @@ export const POST = async (request: NextRequest) => {
     if (!isPasswordCorrect) {
         return NextResponse.json({
             status: "error",
-            message: "Incorrect password, please enter a valid password."
+            message: "Incorrect password. Please double-check and try again."
         }, {
             status: 401
         });
