@@ -3,7 +3,9 @@ import { notFound } from 'next/navigation';
 import React from 'react'
 
 
-export const getUsernameFromSlug = (slug: string): string | null => {
+export const getUsernameFromSlug = (slug: string | any): string | null => {
+    if (slug === undefined || typeof slug !== 'string') return null;
+
     if (!slug.startsWith('%40')) {
         return null;
     }
@@ -11,7 +13,8 @@ export const getUsernameFromSlug = (slug: string): string | null => {
     return slug.replace('%40', '');
 }
 
-const page = async ({ params }: { params: { username: string } }) => {
+
+const page = async ({ params }: { params: any }) => {
     const params_ = await params;
     const username = getUsernameFromSlug(params_.username);
 

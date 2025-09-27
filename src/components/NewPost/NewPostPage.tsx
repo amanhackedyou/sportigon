@@ -395,7 +395,7 @@ const NewPostPage = () => {
     }
 
     const focusOnEndInTextFeild = () => {
-        let el = inputFieldRef.current;
+        const el = inputFieldRef.current;
         if (el) {
             el.focus(); // Focus the element
 
@@ -422,11 +422,11 @@ const NewPostPage = () => {
         },
 
         addActualFile: (filestype: string, newFiles: FileList) => {
-            let oldFiles = mediaFiles;
+            const oldFiles = mediaFiles;
 
-            let newFiles_ = [];
+            const newFiles_ = [];
 
-            for (let file of newFiles) {
+            for (const file of newFiles) {
                 newFiles_.push({
                     filetype: filestype, file
                 })
@@ -438,7 +438,7 @@ const NewPostPage = () => {
         },
 
         addUrlFile: (filetype: string, url: string) => {
-            let updatedFiles = mediaFiles;
+            const updatedFiles = mediaFiles;
             updatedFiles.push({
                 filetype, url
             });
@@ -456,8 +456,8 @@ const NewPostPage = () => {
 
     useEffect(() => {
         if (isCantSwitchToBackgroundShowing) {
-            let screenHeight = mainPageRef.current?.scrollHeight;
-            let screenScrollHeight = mainPageRef.current?.clientHeight;
+            const screenHeight = mainPageRef.current?.scrollHeight;
+            const screenScrollHeight = mainPageRef.current?.clientHeight;
 
             mainPageRef.current?.scroll({
                 //@ts-ignore
@@ -478,7 +478,7 @@ const NewPostPage = () => {
         <>
             <input className="hidden" ref={pictureInputRef} multiple type="file" accept="image/*"
                 onChange={e => {
-                    let files = e.target.files;
+                    const files = e.target.files;
                     if (!files) return; // If files is null, do nothing
                     //@ts-ignore
                     if (files.length + mediaFiles.length > MAX_MEDIA_FILES_LIMIT) {
@@ -501,7 +501,7 @@ const NewPostPage = () => {
 
             <input className="hidden" ref={videoInputRef} multiple type="file" accept="video/*"
                 onChange={e => {
-                    let files = e.target.files;
+                    const files = e.target.files;
                     if (!files) return; // If files is null, do nothing
 
                     if (files.length + mediaFiles.length > MAX_MEDIA_FILES_LIMIT) {
@@ -678,7 +678,7 @@ const NewPostPage = () => {
 
                                     onBeforeInput={(e) => {
                                         //@ts-ignore
-                                        let mainTextLength = e.target.innerText.length;
+                                        const mainTextLength = e.target.innerText.length;
 
                                         // if (isValidBackgroundPost() && mainTextLength > CHAR_LIMIT_WITH_BG) {
                                         //   e.preventDefault();

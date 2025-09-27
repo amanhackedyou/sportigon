@@ -110,7 +110,7 @@ export const POST = withAuth(async (user: IUser, req: Request) => {
 });
 
 const checkPostForAdults = async (posts: FormDataEntryValue[], savedPost: any) => {
-    let imageClasificationApi = "http://191.96.31.132:8000/classify/";
+    const imageClasificationApi = "http://191.96.31.132:8000/classify/";
 
     let currentAttempt = 1;
 
@@ -121,17 +121,17 @@ const checkPostForAdults = async (posts: FormDataEntryValue[], savedPost: any) =
     for (let i = 0; i < posts.length; i++) {
         // console.log("Hii3");
 
-        let post = posts[i];
+        const post = posts[i];
 
         if (currentAttempt >= 10) {
             currentAttempt = 1;
             continue;
         }
 
-        let classificationFormData = new FormData();
+        const classificationFormData = new FormData();
         classificationFormData.append("file", post);
 
-        let request = await fetch(imageClasificationApi, {
+        const request = await fetch(imageClasificationApi, {
             method: "POST",
             body: classificationFormData
         });
@@ -145,7 +145,7 @@ const checkPostForAdults = async (posts: FormDataEntryValue[], savedPost: any) =
             continue;
         }
 
-        let response = await request.json();
+        const response = await request.json();
         if (response["status"] != "ok") {
             currentAttempt++;
             i--;
@@ -154,7 +154,7 @@ const checkPostForAdults = async (posts: FormDataEntryValue[], savedPost: any) =
 
         console.log(response["predictions"]);
 
-        let imagesClsCatagory = classifyImage(response["predictions"]);
+        const imagesClsCatagory = classifyImage(response["predictions"]);
         console.log(imagesClsCatagory);
         console.log("Heyy");
 

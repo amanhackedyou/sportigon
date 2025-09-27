@@ -24,8 +24,8 @@ const LoginPage = () => {
 
 
     const validateForm = () => {
-        let isEmailValid = validator.isEmail(Email.trim());
-        let isPasswordValid = Password.trim().length >= userConfig.minPasswordLength &&
+        const isEmailValid = validator.isEmail(Email.trim());
+        const isPasswordValid = Password.trim().length >= userConfig.minPasswordLength &&
             Password.trim().length <= userConfig.maxPasswordLength;
         return isEmailValid && isPasswordValid;
     }

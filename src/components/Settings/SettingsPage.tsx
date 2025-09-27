@@ -139,12 +139,12 @@ const SettingsPage = () => {
 
             <input ref={profilePictureUploaderRef} className='hidden' type="file" accept='image/*' onChange={async e => {
                 //@ts-ignore
-                let file = e.currentTarget.files[0];
+                const file = e.currentTarget.files[0];
                 if (!file) return;
 
                 // console.log(file);
 
-                let arrayBuffer = await file.arrayBuffer()
+                const arrayBuffer = await file.arrayBuffer()
 
                 const blob = new Blob([arrayBuffer], { type: file.type || 'image/png' })
                 const blobUrl = URL.createObjectURL(blob);
@@ -183,7 +183,7 @@ const SettingsPage = () => {
 
             <input ref={coverPhotoUploaderRef} className='hidden' type="file" accept='image/*' onChange={async e => {
                 //@ts-ignore
-                let file = e.currentTarget.files[0];
+                const file = e.currentTarget.files[0];
                 if (!file) return;
 
                 setCoverPhotoEditFile(file)
@@ -757,11 +757,11 @@ const SelectFavoritePlayerWindow = ({
     // console.log(tempSelectedIndexs);
 
     useEffect(() => {
-        let alreadySelectedPlayerIndex = []
+        const alreadySelectedPlayerIndex = []
 
-        for (let alreadySelectedPlayer of alreadySelectedPlayers) {
-            for (let playerIndex in players) {
-                let player = players[playerIndex];
+        for (const alreadySelectedPlayer of alreadySelectedPlayers) {
+            for (const playerIndex in players) {
+                const player = players[playerIndex];
 
                 if (player.name === alreadySelectedPlayer.name) {
                     alreadySelectedPlayerIndex.push(parseInt(playerIndex))
@@ -785,8 +785,8 @@ const SelectFavoritePlayerWindow = ({
                 <>
                     <button onClick={(e) => {
                         if (tempSelectedIndexs.length > 0) {
-                            let selectedPlayers = [];
-                            for (let playerIndex of tempSelectedIndexs) {
+                            const selectedPlayers = [];
+                            for (const playerIndex of tempSelectedIndexs) {
                                 selectedPlayers.push(players[playerIndex])
                             }
 
@@ -1021,11 +1021,11 @@ const SelectFavoriteClubsWindow = ({
     // console.log(tempSelectedIndexs);
 
     useEffect(() => {
-        let alreadySelectedClubsIndex = []
+        const alreadySelectedClubsIndex = []
 
-        for (let alreadySelectedClub of alreadySelectedClubs) {
-            for (let clubIndex in clubs) {
-                let club = clubs[clubIndex];
+        for (const alreadySelectedClub of alreadySelectedClubs) {
+            for (const clubIndex in clubs) {
+                const club = clubs[clubIndex];
 
                 if (club.name === alreadySelectedClub.name) {
                     alreadySelectedClubsIndex.push(parseInt(clubIndex))
@@ -1049,8 +1049,8 @@ const SelectFavoriteClubsWindow = ({
                 <>
                     <button onClick={(e) => {
                         if (tempSelectedIndexs.length > 0) {
-                            let selectedClubs = [];
-                            for (let clubIndex of tempSelectedIndexs) {
+                            const selectedClubs = [];
+                            for (const clubIndex of tempSelectedIndexs) {
                                 selectedClubs.push(clubs[clubIndex])
                             }
 
@@ -1228,11 +1228,11 @@ const SelectFavoriteCountriesWindow = ({
     useEffect(() => {
 
         if (isFirstRender) {
-            let alreadySelectedCountriesIndex = []
+            const alreadySelectedCountriesIndex = []
 
-            for (let alreadySelectedCountry of alreadySelectedCountries) {
-                for (let countryIndex in countries) {
-                    let country = countries[countryIndex];
+            for (const alreadySelectedCountry of alreadySelectedCountries) {
+                for (const countryIndex in countries) {
+                    const country = countries[countryIndex];
 
                     if (country.name === alreadySelectedCountry.name) {
                         alreadySelectedCountriesIndex.push(parseInt(countryIndex))
@@ -1248,9 +1248,9 @@ const SelectFavoriteCountriesWindow = ({
         if (!searchQuery) return;
         const searchCountries = setTimeout((e) => {
             const result = [];
-            for (let country of countries) {
-                let countryName = country.name.toLowerCase();
-                let searchQuery_ = searchQuery.toLowerCase();
+            for (const country of countries) {
+                const countryName = country.name.toLowerCase();
+                const searchQuery_ = searchQuery.toLowerCase();
 
                 if (countryName.startsWith(searchQuery_)) {
                     result.push(country);
@@ -1281,8 +1281,8 @@ const SelectFavoriteCountriesWindow = ({
                 <>
                     <button onClick={(e) => {
                         if (tempSelectedIndexs.length > 0) {
-                            let selectedCountries = [];
-                            for (let countryIndex of tempSelectedIndexs) {
+                            const selectedCountries = [];
+                            for (const countryIndex of tempSelectedIndexs) {
                                 selectedCountries.push(countries[countryIndex])
                             }
 

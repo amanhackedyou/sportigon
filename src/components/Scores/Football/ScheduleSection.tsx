@@ -262,8 +262,8 @@ const DateSelectorWindow = ({ alreadySelectedDate, onClose }: { alreadySelectedD
     // console.log(formatDate(today));
 
     const DateItem = ({ date }: { date: Date }) => {
-        let formatedDate = formatDate(date);
-        let isSelected = formatedDate === formatDate(selectedDate);
+        const formatedDate = formatDate(date);
+        const isSelected = formatedDate === formatDate(selectedDate);
 
         return <button onClick={e => {
             setSelectedDate(date);

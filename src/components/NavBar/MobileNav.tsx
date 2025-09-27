@@ -129,7 +129,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
 const COMPONENTS = {
     PHONE: {
         ActionButtonLink: ({ href, children, badge = null }: { href: string; children: ReactNode; badge?: number | null; }) => {
-            let router = useRouter();
+            const router = useRouter();
 
             const [isActive, setIsActive] = useState(false);
 

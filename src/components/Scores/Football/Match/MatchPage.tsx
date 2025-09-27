@@ -1,6 +1,6 @@
 "use client"
 
-import React, { lazy, useEffect, useState } from 'react'
+import React, { lazy, useEffect, useMemo, useState } from 'react'
 import TopSection from './ui/TopSection';
 import { IFootballMatch } from '@/types/football/match';
 import { useFootballMatch } from '@/context/Sports/Football/MatchContext';
@@ -8,7 +8,7 @@ import LoadingPage from '@/components/LoadingPage';
 import SummaryTab from './ui/tabs/Summary/Summary';
 import StatsTab from './ui/tabs/Stats';
 import ChatTab from './ui/tabs/Chat';
-import LineUpTab from './ui/tabs/LineUp';
+import LineUpTab from './ui/tabs/LinesUp/LineUp';
 import StandingsTab from './ui/tabs/Standings';
 
 
@@ -22,16 +22,18 @@ import StandingsTab from './ui/tabs/Standings';
 
 const MatchPage = ({ matchStr }: { matchStr: string }) => {
     const [currentTab, setCurrentTab] = useState("Summary");
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const matchContext = useFootballMatch();
 
-    useEffect(() => {
-        const match: IFootballMatch = JSON.parse(matchStr);
-        matchContext.setMatch(match);
-        setIsLoading(false);
-        console.log(match);
+    const match: IFootballMatch = useMemo(() => {
+        return JSON.parse(matchStr);
     }, []);
 
+
+    useEffect(() => {
+        matchContext.setMatch(match);
+        // setIsLoading(false);
+    }, []);
 
 
 
@@ -63,7 +65,7 @@ const MatchPage = ({ matchStr }: { matchStr: string }) => {
                     <SummaryTab isActive={currentTab === "Summary"} />
                     <StatsTab isActive={currentTab === "Stats"} />
                     <ChatTab isActive={currentTab === "Chat"} />
-                    <LineUpTab isActive={currentTab === "Line up"} />
+                    <LineUpTab matchId={match.id} isActive={currentTab === "Line up"} />
                     <StandingsTab isActive={currentTab === "Standings"} />
                 </div>
 

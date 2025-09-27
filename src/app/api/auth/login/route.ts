@@ -64,10 +64,10 @@ export const POST = async (request: NextRequest) => {
     await connectDB();
 
 
-    let body = await request.json() as LoginRequest;
+    const body = await request.json() as LoginRequest;
 
 
-    let validation = checkForValidation(body);
+    const validation = checkForValidation(body);
 
     if (!validation.isValid) {
         return NextResponse.json({
@@ -77,7 +77,7 @@ export const POST = async (request: NextRequest) => {
     }
 
 
-    let user = await UserModel.findOne(body.signupWith == "email" ? { email: body.email } : { phone: body.phone });
+    const user = await UserModel.findOne(body.signupWith == "email" ? { email: body.email } : { phone: body.phone });
 
     if (!user) {
         return NextResponse.json({
@@ -117,7 +117,7 @@ export const POST = async (request: NextRequest) => {
     const response = await fetch(`https://ipwhois.app/json/${ip}`);
     const ipData = await response.json();
 
-    let {
+    const {
         continent,
         continent_code,
         country,
@@ -146,7 +146,7 @@ export const POST = async (request: NextRequest) => {
     } = ipData;
 
 
-    let token = generateJWToken({
+    const token = generateJWToken({
         userId: user._id.toString(),
         loginTime: Date.now()
     });
@@ -186,7 +186,7 @@ export const POST = async (request: NextRequest) => {
 
     await user.save();
 
-    let res = NextResponse.json({
+    const res = NextResponse.json({
         status: "ok",
         message: "Logged in successfully!"
     });

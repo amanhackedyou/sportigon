@@ -100,7 +100,7 @@ export const LeagueSeprater = ({ countryIcon, leagueName, countryName }: { count
 
 }
 
-const Score = ({ isFromFeed = false, id, homeTeam, awayTeam, stage, penaltyScore = undefined, minute }: { isFromFeed?: boolean; id: number; homeTeam: TeamProps; awayTeam: TeamProps; stage: String; penaltyScore?: string; minute?: number }) => {
+const Score = ({ isFromFeed = false, id, homeTeam, awayTeam, stage, penaltyScore = undefined, minute }: { isFromFeed?: boolean; id: number; homeTeam: TeamProps; awayTeam: TeamProps; stage: string; penaltyScore?: string; minute?: number }) => {
     return (
         <div
             className={`flex flex-col gap-2 w-full md:hidden ${true ? "px-2 mb-1 mt-3" : ""

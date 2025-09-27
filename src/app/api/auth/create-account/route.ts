@@ -76,10 +76,10 @@ const checkForValidation = (body: SignupRequest): validationResponse => {
 export const POST = async (request: NextRequest) => {
     await connectDB();
 
-    let body = await request.json() as SignupRequest;
+    const body = await request.json() as SignupRequest;
 
 
-    let validation = checkForValidation(body);
+    const validation = checkForValidation(body);
 
     if (!validation.isValid) {
         return NextResponse.json({
@@ -88,8 +88,8 @@ export const POST = async (request: NextRequest) => {
         }, { status: 400 });
     }
 
-    let hasAlreadyUserWithUsername = await UserModel.findOne({ username: body.username });
-    let hasAlreadyUserWithEmailOrPhone = await UserModel.findOne(body.signupWith == "email" ? { email: body.email } : { phone: body.phone });
+    const hasAlreadyUserWithUsername = await UserModel.findOne({ username: body.username });
+    const hasAlreadyUserWithEmailOrPhone = await UserModel.findOne(body.signupWith == "email" ? { email: body.email } : { phone: body.phone });
 
     if (hasAlreadyUserWithUsername) {
         return NextResponse.json({
@@ -106,7 +106,7 @@ export const POST = async (request: NextRequest) => {
     }
 
 
-    let encryptedPw = await encryptPassword(body.password);
+    const encryptedPw = await encryptPassword(body.password);
 
     // let token = generateJWToken({
     //     username: body.username,
@@ -116,7 +116,7 @@ export const POST = async (request: NextRequest) => {
     const forwardedFor = headersList.get("x-forwarded-for");
 
     // Fallback to req.ip (only works in middleware or edge)
-    let ip = forwardedFor ? forwardedFor.split(",")[0].trim() : "";
+    const ip = forwardedFor ? forwardedFor.split(",")[0].trim() : "";
 
     // For Development - Fetch external IP if running locally
     // if (ip === "::1" || ip === "127.0.0.1") {
@@ -186,7 +186,7 @@ export const POST = async (request: NextRequest) => {
         });
     }
 
-    let token = generateJWToken({
+    const token = generateJWToken({
         userId: user._id.toString(),
         loginTime: Date.now()
     });

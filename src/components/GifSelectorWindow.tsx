@@ -28,7 +28,7 @@ const GifSelectorWindow = ({ close, onGifClick }: { close: () => void; onGifClic
     // const { data: gifs } = await gf.trending({ limit });
     const gifsUrls = [];
 
-    for (let gif of gifs) {
+    for (const gif of gifs) {
       const id = gif.id;
       gifsUrls.push(`https://i.giphy.com/${id}.webp`);
     }
@@ -99,11 +99,11 @@ const GifSelectorWindow = ({ close, onGifClick }: { close: () => void; onGifClic
     <>
       {<input ref={selectGifFromGalaryRef} onChange={e => {
         //@ts-ignore
-        let file = e.target.files[0];
+        const file = e.target.files[0];
 
         if (!file) return;
 
-        let fileReader = new FileReader();
+        const fileReader = new FileReader();
         fileReader.addEventListener(
           "load",
           () => {

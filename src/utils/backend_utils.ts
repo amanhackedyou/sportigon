@@ -32,7 +32,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -81,7 +81,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -130,7 +130,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -179,7 +179,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -228,7 +228,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -277,7 +277,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -326,7 +326,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -375,7 +375,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -424,7 +424,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -473,7 +473,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -522,7 +522,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -571,7 +571,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -620,7 +620,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -669,7 +669,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -718,7 +718,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -767,7 +767,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -816,7 +816,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -865,7 +865,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -914,7 +914,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -963,7 +963,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1012,7 +1012,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1061,7 +1061,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1110,7 +1110,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1159,7 +1159,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1208,7 +1208,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1257,7 +1257,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1306,7 +1306,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1355,7 +1355,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1404,7 +1404,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1453,7 +1453,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1502,7 +1502,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1551,7 +1551,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1600,7 +1600,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1649,7 +1649,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1698,7 +1698,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1747,7 +1747,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1796,7 +1796,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1845,7 +1845,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1894,7 +1894,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1943,7 +1943,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -1992,7 +1992,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2041,7 +2041,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2090,7 +2090,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2139,7 +2139,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2188,7 +2188,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2237,7 +2237,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2286,7 +2286,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2335,7 +2335,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2384,7 +2384,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2433,7 +2433,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2482,7 +2482,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2531,7 +2531,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2580,7 +2580,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2629,7 +2629,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2678,7 +2678,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2727,7 +2727,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2776,7 +2776,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils
@@ -2825,7 +2825,7 @@ export const omitKeys = (obj: any, keys: string[]) => Object.fromEntries(Object.
 export const chunk = <T>(arr: T[], size: number) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 export const uniq = <T>(arr: T[]) => [...new Set(arr)];
 export const flatten = (arr: any[]) => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
-export const shuffle = <T>(arr: T[]) => { let a = [...arr]; for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+export const shuffle = <T>(arr: T[]) => { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 export const intersection = <T>(a: T[], b: T[]) => a.filter(value => b.includes(value));
 
 // ValidationUtils

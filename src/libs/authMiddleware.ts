@@ -5,22 +5,22 @@ import { NextRequest } from "next/server";
 
 export const isUserAutherized = async () => {
     // console.log(req);
-    let cookies_ = await cookies();
-    let tokenCookie = cookies_.get("token");
+    const cookies_ = await cookies();
+    const tokenCookie = cookies_.get("token");
 
     if (!tokenCookie) return false;
 
     const token = tokenCookie.value;
     if (!token) return false;
 
-    let tokenData = verifyJWToken(token);
+    const tokenData = verifyJWToken(token);
     if (!tokenData || (typeof tokenData === "string")) return false;
 
-    let userId = tokenData["userId"];
+    const userId = tokenData["userId"];
 
     if (!userId) return false;
 
-    let isTokenAndUserExists = await findUserByIdAndToken(userId, token);
+    const isTokenAndUserExists = await findUserByIdAndToken(userId, token);
 
     return isTokenAndUserExists ? true : false
 }
@@ -43,18 +43,18 @@ async function findUserByIdAndToken(userId: string, token: string) {
 
 
 export async function getUserIdByCookie() {
-    let cookies_ = await cookies();
-    let tokenCookie = cookies_.get("token");
+    const cookies_ = await cookies();
+    const tokenCookie = cookies_.get("token");
 
     if (!tokenCookie) return null;
 
     const token = tokenCookie.value;
     if (!token) return null;
 
-    let tokenData = verifyJWToken(token);
+    const tokenData = verifyJWToken(token);
     if (!tokenData || (typeof tokenData === "string")) return null;
 
-    let userId = tokenData["userId"];
+    const userId = tokenData["userId"];
 
     return userId;
 }

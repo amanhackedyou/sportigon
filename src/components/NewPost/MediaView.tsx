@@ -37,12 +37,12 @@ const MediaView = ({ mediaFiles, setMediaFiles }: { mediaFiles: MediaFile[], set
                             //     setCurrentSelected(0);
                             // }
 
-                            let newFiles = [];
+                            const newFiles = [];
 
-                            for (let oldFileI in mediaFiles) {
+                            for (const oldFileI in mediaFiles) {
                                 if (parseInt(oldFileI) == i) continue;
 
-                                let oldFile = mediaFiles[oldFileI];
+                                const oldFile = mediaFiles[oldFileI];
                                 newFiles.push(oldFile)
 
                             }
@@ -55,14 +55,14 @@ const MediaView = ({ mediaFiles, setMediaFiles }: { mediaFiles: MediaFile[], set
                         console.log(i);
 
                         return <GifViewer key={i} url={media.url ?? ""} file={media.file ?? null} onClear={() => {
-                            let newFiles = [];
+                            const newFiles = [];
 
-                            for (let oldFileI in mediaFiles) {
+                            for (const oldFileI in mediaFiles) {
                                 if (parseInt(oldFileI) == i) continue;
                                 // console.log('Done');
 
 
-                                let oldFile = mediaFiles[oldFileI];
+                                const oldFile = mediaFiles[oldFileI];
                                 newFiles.push(oldFile)
                             }
 
@@ -74,13 +74,13 @@ const MediaView = ({ mediaFiles, setMediaFiles }: { mediaFiles: MediaFile[], set
                         console.log(i);
 
                         return <VideoView key={i} file={media.file} onClear={() => {
-                            let newFiles = [];
+                            const newFiles = [];
 
-                            for (let oldFileI in mediaFiles) {
+                            for (const oldFileI in mediaFiles) {
                                 if (parseInt(oldFileI) == i) continue;
                                 // console.log('Done');
 
-                                let oldFile = mediaFiles[oldFileI];
+                                const oldFile = mediaFiles[oldFileI];
                                 newFiles.push(oldFile)
                             }
 
@@ -128,7 +128,7 @@ const ImageView = ({ file, onClear }: { file: File; onClear: () => void; }) => {
     const [blobFileUrl, setBlobFileUrl] = useState<string | ArrayBuffer | null>(null);
     const [isFullScreen, setIsFullScreen] = useState(false);
 
-    let fileReader = new FileReader();
+    const fileReader = new FileReader();
     fileReader.addEventListener(
         "load",
         () => {
@@ -180,7 +180,7 @@ const VideoView = ({ file, onClear }: { file: File; onClear: () => void; }) => {
             // videoRef.current.currentTime = randomTime;
 
             const duration = videoRef.current?.duration || 1;
-            let predictedThumbnailTime = (duration / 100) * 20;
+            const predictedThumbnailTime = (duration / 100) * 20;
             //@ts-ignore
             videoRef.current.currentTime = predictedThumbnailTime;
         });
@@ -247,7 +247,7 @@ const GifViewer = ({ url, file, onClear }: { url: string; file: File | null; onC
 
 
     if (file) {
-        let fileReader = new FileReader();
+        const fileReader = new FileReader();
         fileReader.addEventListener(
             "load",
             () => {
@@ -306,7 +306,7 @@ const FullScreenVideoView = ({ src, close }: { src: string; close: () => void; }
         const seconds = Math.floor(totalSeconds % 60);
 
         // Format the duration as "0:00"
-        let formattedDuration = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+        const formattedDuration = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
         // if (minutes == NaN) {
         //     formattedDuration = "0:00";
@@ -409,8 +409,8 @@ const FullScreenVideoView = ({ src, close }: { src: string; close: () => void; }
                     <div className="flex items-center gap-2 w-full">
                         <div
                             onClick={(e) => {
-                                let clickX = e.nativeEvent.offsetX;
-                                let width = e.currentTarget.clientWidth;
+                                const clickX = e.nativeEvent.offsetX;
+                                const width = e.currentTarget.clientWidth;
 
                                 const percentage = (clickX / width) * 100;
                                 //@ts-ignore

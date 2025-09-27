@@ -73,7 +73,7 @@ export const updateMatchesCache = async (date: string) => {
     }
 
     // Organize → Country → Leagues → Matches
-    let organizedMatches: { [countryCode: string]: any } = {};
+    const organizedMatches: { [countryCode: string]: any } = {};
 
     matches.forEach((match) => {
         const countryCode = match.country.code;
@@ -116,7 +116,7 @@ export const updateMatchesCache = async (date: string) => {
     Object.keys(organizedMatches).forEach((countryCode) => {
         const country = organizedMatches[countryCode];
 
-        let leaguesArray = Object.values(country.leagues);
+        const leaguesArray = Object.values(country.leagues);
 
         // Sort leagues → priority first, then alphabetically
         leaguesArray.sort((a: any, b: any) => {

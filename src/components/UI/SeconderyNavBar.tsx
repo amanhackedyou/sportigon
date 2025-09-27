@@ -6,7 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { GoArrowLeft } from "react-icons/go";
 
 const SeconderyNavBar = ({ title, hasBottomLine = true, actions = [] }: { title: string; hasBottomLine?: boolean; actions?: React.ReactNode[]; }) => {
-    let navigator = useRouter();
+    const navigator = useRouter();
 
     return (
         <section className={`flex items-center w-full sticky z-50 justify-between left-0 bg-white py-1 top-0 px-3 ${hasBottomLine ? "border-b border-[#D4E2DF]" : ""} `}>
