@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site.config";
 import NavBar from "@/components/NavBar/NavBar";
 import { NavBarProvider } from "@/components/NavBar/NavBarContext";
 import { FeedProvider } from "@/context/FeedContext";
+import { WebSocketProvider } from "@/context/WebSocket/WebSocketContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,11 +46,13 @@ export default function RootLayout({
       >
         <ModalProvider>
           <AuthProvider>
-            <FeedProvider>
-              <NavBarProvider>
-                {children}
-              </NavBarProvider>
-            </FeedProvider>
+            <WebSocketProvider>
+              <FeedProvider>
+                <NavBarProvider>
+                  {children}
+                </NavBarProvider>
+              </FeedProvider>
+            </WebSocketProvider>
           </AuthProvider>
         </ModalProvider>
       </body>

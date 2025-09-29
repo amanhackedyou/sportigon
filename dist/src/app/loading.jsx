@@ -1,0 +1,6 @@
+import LoadingPage from "@/components/LoadingPage";
+export default function Loading() {
+    // Or a custom loading skeleton component
+    return <LoadingPage />;
+}
+//# sourceMappingURL=loading.jsx.map

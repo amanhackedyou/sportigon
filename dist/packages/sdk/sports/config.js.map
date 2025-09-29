@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sourceRoot":"","sources":["../../../../packages/sdk/sports/config.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,YAAY,GAAG;IACxB,QAAQ,EAAE;QACN,OAAO,EAAE,gCAAgC;QACzC,OAAO,EAAE;YACL,cAAc,EAAE,kBAAkB;YAClC,iBAAiB,EAAE,wCAAwC;YAC3D,gBAAgB,EAAE,sCAAsC;SAC3D;KACJ;CACJ,CAAC"}

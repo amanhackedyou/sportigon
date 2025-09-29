@@ -1,0 +1,7 @@
+import SettingsPage from '@/components/Settings/SettingsPage';
+import React from 'react';
+const page = () => {
+    return (<SettingsPage />);
+};
+export default page;
+//# sourceMappingURL=page.jsx.map

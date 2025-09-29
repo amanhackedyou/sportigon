@@ -21,3 +21,36 @@ export function getDateInTimezone(timezone: string): string {
     // en-CA outputs as yyyy-mm-dd by default
     return formatter.format(new Date());
 }
+
+/**
+ * Parse a raw Cookie header string into an object.
+ *
+ * @param cookieHeader raw cookie header string (e.g. from req.headers.cookie)
+ * @returns object of cookies { key: value } or null if invalid
+ */
+export function parseCookies(cookieHeader?: string | null): Record<string, string> | null {
+    try {
+        if (!cookieHeader || typeof cookieHeader !== "string") {
+            return null;
+        }
+
+        const cookies: Record<string, string> = {};
+
+        cookieHeader.split(";").forEach((part) => {
+            const [rawKey, ...rawValParts] = part.split("=");
+            if (!rawKey) return;
+
+            const key = rawKey.trim();
+            const value = rawValParts.join("=").trim(); // join in case value contains '='
+
+            if (key) {
+                cookies[key] = decodeURIComponent(value);
+            }
+        });
+
+        return cookies;
+    } catch (err) {
+        console.error("Failed to parse cookies:", err);
+        return null;
+    }
+}
